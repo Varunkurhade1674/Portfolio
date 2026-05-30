@@ -3,4 +3,5 @@ dist/
 .vite/
 public/*.mp4
 videos_backup/
+*.mp4videos_backup/
 *.mp4
