@@ -1,0 +1,4 @@
+.\public\Cryptalk.mp4
+.\public\PlayCoding.mp4
+.\public\Zerodhaclone.mp4
+.\public\Wanderlust.mp4
