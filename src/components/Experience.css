@@ -7,8 +7,8 @@
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 1fr 60px 1fr;
-  gap: 0;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
   align-items: start;
   min-height: 220px;
 }
@@ -19,6 +19,7 @@
   align-items: center;
   position: relative;
   padding-top: 32px;
+  grid-column: 1;
 }
 
 .timeline-line {
@@ -47,39 +48,10 @@
 }
 
 .timeline-card {
+  grid-column: 2;
   padding: 28px;
-  margin: 8px 20px;
+  margin: 16px 0;
   position: relative;
-}
-
-.timeline-left {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.timeline-right {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.timeline-item:nth-child(odd) .timeline-card {
-  grid-column: 1;
-}
-
-.timeline-item:nth-child(even) .timeline-card {
-  grid-column: 3;
-}
-
-.timeline-item:nth-child(odd) .timeline-center {
-  grid-column: 2;
-}
-
-.timeline-item:nth-child(even) .timeline-center {
-  grid-column: 2;
-}
-
-/* override - show all on right side since data has only 2 items */
-.timeline-card {
   border-left: 2px solid var(--exp-color, var(--accent));
 }
 
@@ -169,20 +141,17 @@
 
 @media (max-width: 768px) {
   .timeline-item {
-    grid-template-columns: 40px 1fr;
-    gap: 0;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
   }
 
   .timeline-center {
-    grid-column: 1;
-    grid-row: 1;
     padding-top: 28px;
   }
 
   .timeline-card {
-    grid-column: 2 !important;
-    grid-row: 1;
-    margin: 8px 0 8px 16px;
+    margin: 8px 0;
+    padding: 20px;
   }
 
   .timeline-dot {

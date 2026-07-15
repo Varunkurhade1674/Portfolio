@@ -30,7 +30,7 @@ export default function Experience() {
             <motion.div
               key={exp.id}
               className="timeline-item"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, x: 50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: index * 0.2 }}
             >
@@ -42,7 +42,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className={`timeline-card glass-card ${index % 2 === 0 ? 'timeline-left' : 'timeline-right'}`} style={{ '--exp-color': exp.color }}>
+              <div className="timeline-card glass-card" style={{ '--exp-color': exp.color }}>
                 <div className="exp-card-top">
                   <div>
                     <div className="exp-company-row">
