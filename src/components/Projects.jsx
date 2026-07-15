@@ -5,7 +5,7 @@ import { useInView } from '../hooks/useInView';
 import { projects } from '../data';
 import './Projects.css';
 
-const allFilters = ['All', 'React', 'Node.js', 'Python', 'AI'];
+const allFilters = ['All', 'Python', 'React'];
 
 function ProjectCard({ project, onClick, index, inView, isCarousel }) {
   const x = useMotionValue(0);
@@ -366,9 +366,6 @@ export default function Projects() {
               <h2 className="section-title">
                 Things I've <span style={{ color: 'var(--accent)' }}>Built</span>
               </h2>
-              <p className="section-subtitle">
-                From quantum-safe encrypted chat apps to MERN-stack platforms.
-              </p>
             </div>
             <div className="project-filters">
               {allFilters.map((f) => (
