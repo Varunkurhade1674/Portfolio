@@ -38,11 +38,17 @@ export const skills = {
     { name: "MongoDB", level: 82 },
     { name: "SQL", level: 75 },
     { name: "Firebase", level: 74 },
+    { name: "Vector Databases", level: 85 },
   ],
   Tools: [
     { name: "Git & GitHub", level: 88 },
+  ],
+  Editors: [
     { name: "VS Code", level: 90 },
-    { name: "Vite", level: 78 },
+    { name: "Antigravity", level: 90 },
+    { name: "Cursor", level: 88 },
+    { name: "Windsurf", level: 85 },
+    { name: "ClaudeAI", level: 88 },
   ],
   "Soft Skills": [
     { name: "Problem Solving", level: 90 },
