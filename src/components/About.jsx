@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCode, FiZap, FiLock, FiLayers, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiCpu, FiGitMerge, FiMessageSquare, FiLayers, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { useInView } from '../hooks/useInView';
 import { education, personalInfo } from '../data';
 import './About.css';
 
 const traits = [
-  { icon: <FiCode size={20} />, title: 'Clean Code', desc: 'Modular, readable, production-ready code.' },
-  { icon: <FiZap size={20} />, title: 'Performance', desc: 'Optimized builds & fast user experiences.' },
-  { icon: <FiLock size={20} />, title: 'Security First', desc: 'ZKP, Kyber, & AES — security is my forte.' },
-  { icon: <FiLayers size={20} />, title: 'Full Stack', desc: 'End-to-end UI to database design.' },
+  { icon: <FiCpu size={20} />, title: 'Agentic Workflows', desc: 'Building multi-agent systems for autonomous problem solving.' },
+  { icon: <FiLayers size={20} />, title: 'RAG Architecture', desc: 'Scalable semantic search & contextual document intelligence.' },
+  { icon: <FiMessageSquare size={20} />, title: 'Multimodal AI', desc: 'Integrating text, vision, and speech for richer interactions.' },
+  { icon: <FiGitMerge size={20} />, title: 'LLM Orchestration', desc: 'Prompt engineering & integrating LLMs for real-world automation.' },
 ];
 
 export default function About() {
@@ -28,13 +28,13 @@ export default function About() {
             <div className="avatar-ring" />
           </div>
           <h3 className="card-subtitle">{personalInfo.name}</h3>
-          <p className="card-tagline">Full Stack Developer</p>
+          <p className="card-tagline">{personalInfo.roles[0]}</p>
           <div className="card-divider" />
           <p className="card-body">
-            I'm a Computer Science student at Jain College of Engineering, currently interning as a Full Stack Developer at <strong>Spherenex</strong>.
+            I'm a Computer Science student at Jain College of Engineering, actively building intelligent automation solutions.
           </p>
           <p className="card-body">
-            My passion lies in building secure systems — from Zero Knowledge Proofs to post-quantum cryptography.
+            {personalInfo.bio}
           </p>
           <div className="card-footer-info">
              <div><FiMail /> {personalInfo.email}</div>

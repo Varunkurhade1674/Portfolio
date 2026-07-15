@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { personalInfo } from '../data';
 
 // Reusable Typewriter for the rotating roles
 const RoleWriter = () => {
-  const words = ['React Developer', 'Frontend Engineer', 'Full Stack Builder'];
+  const words = personalInfo.roles;
   const [text, setText] = useState('');
   const [wordIdx, setWordIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
@@ -104,7 +105,7 @@ export default function Hero() {
             className="text-slate-400 text-lg md:text-[20px] leading-relaxed max-w-lg" 
             style={{ fontFamily: 'var(--font-body)' }}
           >
-            I build modern, scalable web applications. Passionate about clean UI, performant code, and crafting digital experiences that drive real impact.
+            I build intelligent, scalable AI systems. Passionate about multi-agent workflows, RAG architectures, and crafting AI-driven experiences that solve complex real-world problems.
           </motion.p>
 
           {/* Action Buttons */}

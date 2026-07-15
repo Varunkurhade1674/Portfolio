@@ -1,12 +1,12 @@
 export const personalInfo = {
   name: "Kurhade Varun Vijay",
   shortName: "Varun",
-  roles: ["Generative AI Engineer", "Agentic AI Engineer"],
+  roles: ["GenAi and Agentic Ai Engineer"],
   email: "kurhadevarun3@gmail.com",
   phone: "+91 9356022799",
   github: "https://github.com/Varunkurhade1674",
   linkedin: "https://www.linkedin.com/in/varun-kurhade-b53310281",
-  bio: "Generative AI / Agentic AI Engineer building multi-agent systems, RAG pipelines, and LLM-powered applications using LangChain, LangGraph, and prompt engineering. Full-stack foundation to ship production-ready AI systems end to end.",
+  bio: "Generative AI / Agentic AI Engineer building multi-agent systems, RAG pipelines, and LLM-powered applications using LangChain, LangGraph, and prompt engineering.",
   location: "Bengaluru, Karnataka, India",
 };
 
