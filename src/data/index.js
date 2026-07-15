@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Kurhade Varun Vijay",
   shortName: "Varun",
-  roles: ["Generative AI Engineer", "Agentic AI Engineer", "Full Stack Developer", "Problem Solver"],
+  roles: ["Generative AI Engineer", "Agentic AI Engineer"],
   email: "kurhadevarun3@gmail.com",
   phone: "+91 9356022799",
   github: "https://github.com/Varunkurhade1674",
