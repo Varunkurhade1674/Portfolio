@@ -31,9 +31,9 @@ const RoleWriter = () => {
   }, [charIdx, isDeleting, wordIdx]);
 
   return (
-    <span className="text-emerald-400 font-semibold tracking-wide">
+    <span className="text-[#8b5cf6] font-semibold tracking-wide">
       {text}
-      <span className="animate-pulse text-blue-400 ml-1">|</span>
+      <span className="animate-pulse text-[#c084fc] ml-1">|</span>
     </span>
   );
 };
@@ -88,7 +88,7 @@ export default function Hero() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.1]" 
                 style={{ fontFamily: 'var(--font-display)' }}
               >
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c880] to-[#00d2ff]">Varun</span>
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#d8b4fe]">Varun</span>
               </h1>
               <div 
                 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-600 leading-tight h-10 md:h-12 flex items-center" 

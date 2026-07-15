@@ -85,7 +85,7 @@ export default function About() {
           ))}
         </div>
       ),
-      color: '#00d2ff',
+      color: '#c084fc',
       rotation: 10,
       offset: 320,
     }

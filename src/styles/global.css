@@ -7,25 +7,25 @@
 }
 
 :root {
-  --bg-primary: #F5F5F5;
-  --bg-secondary: #DFF1F1;
-  --bg-card: rgba(223, 241, 241, 0.7); /* #DFF1F1 */
-  --bg-card-hover: rgba(223, 241, 241, 0.9);
-  --border-card: #BBD5DA;
-  --border: rgba(187, 213, 218, 0.5); /* #BBD5DA with opacity */
-  --border-hover: #BBD5DA;
+  --bg-primary: #faf5ff; /* very light purple/white */
+  --bg-secondary: #f3e8ff; /* light lavender */
+  --bg-card: rgba(243, 232, 255, 0.7); /* translucent light lavender */
+  --bg-card-hover: rgba(243, 232, 255, 1);
+  --border-card: #d8b4fe;
+  --border: rgba(216, 180, 254, 0.5);
+  --border-hover: #c084fc;
 
-  --accent: #BBD5DA;
-  --accent-dim: rgba(187, 213, 218, 0.3);
-  --accent-glow: rgba(187, 213, 218, 0.4);
-  --purple: #BBD5DA;
-  --purple-dim: rgba(187, 213, 218, 0.15);
-  --amber: #BBD5DA;
-  --amber-dim: rgba(187, 213, 218, 0.15);
+  --accent: #8b5cf6; /* vibrant purple */
+  --accent-dim: rgba(139, 92, 246, 0.15);
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --purple: #8b5cf6;
+  --purple-dim: rgba(139, 92, 246, 0.15);
+  --amber: #8b5cf6;
+  --amber-dim: rgba(139, 92, 246, 0.15);
 
-  --text-primary: #0f172a; 
-  --text-secondary: #334155;
-  --text-muted: #475569;
+  --text-primary: #1e1b4b; /* deep indigo for headings */
+  --text-secondary: #475569; /* slate gray for text */
+  --text-muted: #64748b;
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -124,6 +124,8 @@ img {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
+  color: var(--accent); /* Whole title is purple */
+  text-transform: uppercase; /* Match the CORE PRINCIPLES uppercase style */
 }
 
 .section-subtitle {

@@ -48,15 +48,7 @@ function ProjectCard({ project, onClick, index, inView, isCarousel }) {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-    >
-      {project.featured && (
-        <div className="featured-ribbon">
-          <FiStar size={10} />
-          FEATURED
-        </div>
-      )}
-
-      <div className="project-header">
+    >      <div className="project-header">
         <div className="project-icon-wrap" style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}>
           <span className="project-icon">{project.icon}</span>
         </div>
@@ -135,14 +127,9 @@ function ProjectModal({ project, onClose }) {
               <div className="modal-title-row">
                 <span className="modal-icon">{project.icon}</span>
                 <div>
-                  <h2 className="modal-title">{project.title}</h2>
-                  <p className="modal-subtitle" style={{ color: project.color }}>{project.subtitle}</p>
+                  <h2 className="modal-title" style={{ color: 'var(--text-primary)' }}>{project.title}</h2>
+                  <p className="modal-subtitle" style={{ color: 'var(--text-secondary)', fontWeight: '600', letterSpacing: '0.5px' }}>{project.subtitle}</p>
                 </div>
-                {project.featured && (
-                  <span className="badge" style={{ background: `${project.color}15`, color: project.color, border: `1px solid ${project.color}30`, marginLeft: 'auto' }}>
-                    <FiStar size={10} /> FEATURED
-                  </span>
-                )}
               </div>
               <button className="modal-close" onClick={onClose}><FiX size={20} /></button>
             </div>
@@ -155,8 +142,8 @@ function ProjectModal({ project, onClose }) {
               <div className="modal-features">
                 {project.features.map((f) => (
                   <div key={f} className="modal-feature">
-                    <FiCheck size={14} style={{ color: project.color, flexShrink: 0 }} />
-                    <span>{f}</span>
+                    <FiCheck size={16} style={{ color: 'var(--text-primary)', flexShrink: 0, strokeWidth: 3 }} />
+                    <span style={{ color: 'var(--text-secondary)' }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -166,7 +153,7 @@ function ProjectModal({ project, onClose }) {
               <div className="modal-section-title">Tech Stack</div>
               <div className="modal-tech-row">
                 {project.tech.map((t) => (
-                  <span key={t} className="tech-tag" style={{ color: project.color, borderColor: `${project.color}30`, background: `${project.color}15` }}>
+                  <span key={t} className="tech-tag" style={{ color: '#ffffff', background: 'var(--text-primary)', borderColor: 'var(--text-primary)', fontWeight: '600', padding: '6px 12px' }}>
                     {t}
                   </span>
                 ))}
@@ -174,15 +161,15 @@ function ProjectModal({ project, onClose }) {
             </div>
 
             <div className="modal-cta-row">
-              <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-outline">
+              <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: 'var(--text-primary)', color: 'var(--text-primary)', fontWeight: '600' }}>
                 <FiGithub size={16} /> GitHub
               </a>
               {project.demoVideo ? (
-                <button onClick={() => setShowVideo(true)} className="btn btn-primary" style={{ background: project.color, boxShadow: `0 0 20px ${project.color}40`, border: 'none', color: '#ffffff' }}>
+                <button onClick={() => setShowVideo(true)} className="btn btn-primary" style={{ background: 'var(--text-primary)', color: '#ffffff', boxShadow: '0 10px 25px rgba(15,23,42,0.2)' }}>
                   <FiPlay size={16} /> Watch Demo
                 </button>
               ) : (
-                <a href={project.live} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ background: project.color, boxShadow: `0 0 20px ${project.color}40` }}>
+                <a href={project.live} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ background: 'var(--text-primary)', color: '#ffffff', boxShadow: '0 10px 25px rgba(15,23,42,0.2)' }}>
                   <FiExternalLink size={16} /> Live Demo
                 </a>
               )}

@@ -251,9 +251,9 @@
   margin-left: auto;
   font-family: var(--font-mono);
   font-size: 13px;
-  color: #00d2ff;
+  color: var(--accent);
   font-weight: 600;
-  background: rgba(0, 210, 255, 0.1);
+  background: var(--accent-dim);
   padding: 4px 10px;
   border-radius: 100px;
 }
