@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { personalInfo } from '../data';
 import './Loader.css';
 
 export default function Loader({ onComplete }) {
@@ -44,7 +45,7 @@ export default function Loader({ onComplete }) {
               <div className="loader-monogram-ring" />
             </div>
             <div className="loader-name">VARUN VIJAY</div>
-            <div className="loader-role">Full Stack Developer</div>
+            <div className="loader-role">{personalInfo.roles[0]}</div>
             <div className="loader-bar-wrapper">
               <motion.div
                 className="loader-bar"

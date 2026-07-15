@@ -7,24 +7,25 @@
 }
 
 :root {
-  --bg-primary: #050508;
-  --bg-secondary: #0a0a12;
-  --bg-card: #0e0e1a;
-  --bg-card-hover: #13131f;
-  --border: rgba(255,255,255,0.06);
-  --border-hover: rgba(0,245,160,0.3);
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #DFF1F1;
+  --bg-card: rgba(223, 241, 241, 0.7); /* #DFF1F1 */
+  --bg-card-hover: rgba(223, 241, 241, 0.9);
+  --border-card: #BBD5DA;
+  --border: rgba(187, 213, 218, 0.5); /* #BBD5DA with opacity */
+  --border-hover: #BBD5DA;
 
-  --accent: #00f5a0;
-  --accent-dim: rgba(0,245,160,0.12);
-  --accent-glow: rgba(0,245,160,0.4);
-  --purple: #7c3aed;
-  --purple-dim: rgba(124,58,237,0.12);
-  --amber: #f59e0b;
-  --amber-dim: rgba(245,158,11,0.12);
+  --accent: #BBD5DA;
+  --accent-dim: rgba(187, 213, 218, 0.3);
+  --accent-glow: rgba(187, 213, 218, 0.4);
+  --purple: #BBD5DA;
+  --purple-dim: rgba(187, 213, 218, 0.15);
+  --amber: #BBD5DA;
+  --amber-dim: rgba(187, 213, 218, 0.15);
 
-  --text-primary: #f0f0f8;
-  --text-secondary: #8888aa;
-  --text-muted: #55556a;
+  --text-primary: #0f172a; 
+  --text-secondary: #334155;
+  --text-muted: #475569;
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -35,8 +36,9 @@
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  --shadow-card: 0 8px 40px rgba(0,0,0,0.4);
-  --shadow-glow: 0 0 40px rgba(0,245,160,0.15);
+  --shadow-card: 0 15px 35px -5px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 20px 40px -5px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(0, 168, 112, 0.25);
 }
 
 html {
@@ -139,7 +141,7 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 /* Glow orbs background */
@@ -154,7 +156,7 @@ body::before {
 .bg-orb-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0,245,160,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,245,160,0.15) 0%, transparent 70%);
   top: -200px;
   left: -200px;
 }
@@ -162,7 +164,7 @@ body::before {
 .bg-orb-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
   bottom: 20%;
   right: -150px;
 }
@@ -170,7 +172,7 @@ body::before {
 .bg-orb-3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(245,158,11,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%);
   top: 50%;
   left: 40%;
 }
@@ -178,17 +180,20 @@ body::before {
 /* Glass card base */
 .glass-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(20px);
-  transition: all 0.3s ease;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .glass-card:hover {
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover), var(--shadow-glow);
 }
 
 /* Badge */
@@ -213,7 +218,7 @@ body::before {
 
 .badge-purple {
   background: var(--purple-dim);
-  color: #a78bfa;
+  color: var(--purple);
   border: 1px solid rgba(124,58,237,0.25);
 }
 
@@ -240,14 +245,14 @@ body::before {
 
 .btn-primary {
   background: var(--accent);
-  color: #050508;
+  color: var(--text-primary);
   font-weight: 700;
-  box-shadow: 0 0 20px rgba(0,245,160,0.3);
+  box-shadow: 0 0 20px rgba(187, 213, 218, 0.4);
 }
 
 .btn-primary:hover {
-  background: #00ffaa;
-  box-shadow: 0 0 40px rgba(0,245,160,0.5);
+  background: #a3c1c8; /* slightly darker version of BBD5DA */
+  box-shadow: 0 0 30px rgba(187, 213, 218, 0.6);
   transform: translateY(-2px);
 }
 
@@ -270,10 +275,10 @@ body::before {
   border-radius: 6px;
   font-size: 11px;
   font-family: var(--font-mono);
-  font-weight: 500;
-  background: rgba(255,255,255,0.04);
+  font-weight: 600;
+  background: rgba(0,0,0,0.04);
   color: var(--text-secondary);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
   white-space: nowrap;
 }
 

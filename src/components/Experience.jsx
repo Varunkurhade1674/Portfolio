@@ -78,7 +78,7 @@ export default function Experience() {
                     <span
                       key={t}
                       className="tech-tag"
-                      style={{ color: exp.color, background: `${exp.color}10`, borderColor: `${exp.color}25` }}
+                      style={{ color: exp.color, background: `${exp.color}15`, borderColor: `${exp.color}30` }}
                     >
                       {t}
                     </span>

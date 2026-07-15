@@ -12,11 +12,11 @@
 
 .navbar-scrolled {
   padding: 16px 0;
-  background: rgba(5, 5, 8, 0.75);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-inner {
@@ -128,7 +128,7 @@
   left: 16px;
   right: 16px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   padding: 20px;
   z-index: 999;

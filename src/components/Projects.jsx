@@ -60,7 +60,17 @@ function ProjectCard({ project, onClick, index, inView, isCarousel }) {
         <div className="project-icon-wrap" style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}>
           <span className="project-icon">{project.icon}</span>
         </div>
-        <div className="project-badge-wrap">
+        <div className="project-badge-wrap" style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+          <span
+            className="badge"
+            style={{
+              background: `${project.color}15`,
+              color: project.color,
+              border: `1px solid ${project.color}30`,
+            }}
+          >
+            #{String(index + 1).padStart(2, '0')}
+          </span>
           <span
             className="badge"
             style={{
@@ -156,7 +166,7 @@ function ProjectModal({ project, onClose }) {
               <div className="modal-section-title">Tech Stack</div>
               <div className="modal-tech-row">
                 {project.tech.map((t) => (
-                  <span key={t} className="tech-tag" style={{ color: project.color, borderColor: `${project.color}25`, background: `${project.color}10` }}>
+                  <span key={t} className="tech-tag" style={{ color: project.color, borderColor: `${project.color}30`, background: `${project.color}15` }}>
                     {t}
                   </span>
                 ))}
@@ -168,8 +178,8 @@ function ProjectModal({ project, onClose }) {
                 <FiGithub size={16} /> GitHub
               </a>
               {project.demoVideo ? (
-                <button onClick={() => setShowVideo(true)} className="btn btn-primary" style={{ background: project.color, boxShadow: `0 0 20px ${project.color}40`, border: 'none', color: '#050508' }}>
-                  <FiExternalLink size={16} /> Live Demo
+                <button onClick={() => setShowVideo(true)} className="btn btn-primary" style={{ background: project.color, boxShadow: `0 0 20px ${project.color}40`, border: 'none', color: '#ffffff' }}>
+                  <FiPlay size={16} /> Watch Demo
                 </button>
               ) : (
                 <a href={project.live} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ background: project.color, boxShadow: `0 0 20px ${project.color}40` }}>
@@ -220,127 +230,7 @@ function ProjectModal({ project, onClose }) {
   );
 }
 
-function CarouselCard({ project, index, totalAngle, radius, smoothRotation, onSelect }) {
-  const blur = useTransform(smoothRotation, (v) => {
-    let relAngle = (v + totalAngle) % 360;
-    if (relAngle > 180) relAngle -= 360;
-    if (relAngle < -180) relAngle += 360;
-    const absAngle = Math.abs(relAngle);
-    if (absAngle < 35) return 'blur(0px)';
-    const blurAmount = ((absAngle - 35) / 145) * 12; // Increased max blur to 12px
-    return `blur(${blurAmount}px)`;
-  });
 
-  const opacity = useTransform(smoothRotation, (v) => {
-    let relAngle = (v + totalAngle) % 360;
-    if (relAngle > 180) relAngle -= 360;
-    if (relAngle < -180) relAngle += 360;
-    const absAngle = Math.abs(relAngle);
-    if (absAngle < 60) return 1;
-    return 1 - ((absAngle - 60) / 120) * 0.75; // Heavy opacity fade down to 0.25 at the far back
-  });
-
-  return (
-    <motion.div
-      className="carousel-card-wrap"
-      style={{
-        transform: `rotateY(${totalAngle}deg) translateZ(${radius}px)`,
-        filter: blur,
-        opacity: opacity
-      }}
-    >
-      <ProjectCard project={project} onClick={onSelect} index={index} inView={true} isCarousel={true} />
-    </motion.div>
-  );
-}
-
-function ProjectCarousel({ items, onSelect }) {
-  const rotation = useMotionValue(0);
-  const smoothRotation = useSpring(rotation, { stiffness: 60, damping: 20 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const angle = items.length ? 360 / items.length : 0;
-  
-  // Dynamically calculate the radius so that cards don't overlap.
-  const baseCardWidth = 280; 
-  let radius = 200;
-  if(items.length > 1) {
-    radius = (baseCardWidth / 2) / Math.tan(Math.PI / items.length) + 50;
-    radius = Math.max(220, radius);
-  }
-
-  // Auto-rotate every 5 seconds
-  useEffect(() => {
-    if (items.length <= 1 || isHovered) return;
-    
-    const interval = setInterval(() => {
-      const currentRot = rotation.get();
-      const nearest = Math.round(currentRot / angle) * angle;
-      rotation.set(nearest - angle); // Rotate right (next element)
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [items.length, angle, rotation, isHovered]);
-  
-  if (items.length <= 1) {
-    return (
-       <div className="projects-single-fallback">
-         {items.map((project, i) => (
-            <ProjectCard key={project.id} project={project} onClick={onSelect} index={i} inView={true} isCarousel={true} />
-         ))}
-       </div>
-    )
-  }
-
-  function handleRotate(dir) {
-    const currentRot = rotation.get();
-    const nearest = Math.round(currentRot / angle) * angle;
-    rotation.set(nearest + dir * angle);
-  }
-
-  return (
-    <div 
-      className="carousel-scene"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onPointerDown={() => setIsHovered(true)}
-      onPointerUp={() => setIsHovered(false)}
-    >
-      <button className="carousel-nav-btn left-nav" onClick={() => handleRotate(1)}>
-        <FiChevronLeft size={28} />
-      </button>
-
-      <motion.div
-        className="carousel-rotator"
-        style={{ rotateY: smoothRotation, z: -radius + 250 }}
-        onPan={(e, info) => {
-          rotation.set(rotation.get() + info.delta.x * 0.4);
-        }}
-        whileTap={{ cursor: "grabbing" }}
-      >
-        {items.map((project, i) => (
-          <CarouselCard
-            key={project.id}
-            project={project}
-            index={i}
-            totalAngle={angle * i}
-            radius={radius}
-            smoothRotation={smoothRotation}
-            onSelect={onSelect}
-          />
-        ))}
-      </motion.div>
-
-      <button className="carousel-nav-btn right-nav" onClick={() => handleRotate(-1)}>
-        <FiChevronRight size={28} />
-      </button>
-
-      <div className="carousel-instructions">
-        Swipe or use arrows to rotate
-      </div>
-    </div>
-  );
-}
 
 export default function Projects() {
   const [ref, inView] = useInView(0.1);
@@ -384,12 +274,15 @@ export default function Projects() {
         <AnimatePresence mode="wait">
           <motion.div
             key={filter}
+            className="projects-grid"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <ProjectCarousel items={filtered} onSelect={setSelected} />
+            {filtered.map((project, i) => (
+              <ProjectCard key={project.id} project={project} onClick={setSelected} index={i} inView={inView} />
+            ))}
           </motion.div>
         </AnimatePresence>
       </div>

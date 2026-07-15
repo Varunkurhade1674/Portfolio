@@ -197,7 +197,7 @@ a.contact-item-value:hover {
   width: 16px;
   height: 16px;
   border: 2px solid rgba(0,0,0,0.3);
-  border-top-color: #050508;
+  border-top-color: var(--bg-primary);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }

@@ -1,15 +1,38 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { skills } from '../data';
+import { 
+  FaPython, FaJava, FaReact, FaHtml5, FaBootstrap, 
+  FaNodeJs, FaGithub, FaDatabase, FaLaptopCode 
+} from 'react-icons/fa';
+import { 
+  SiJavascript, SiExpress, SiFastapi, SiMongodb, SiFirebase 
+} from 'react-icons/si';
+import { TbApi, TbBrain } from 'react-icons/tb';
+import { BsRobot } from 'react-icons/bs';
 import './Skills.css';
 
-const categoryColors = {
-  "Programming Languages": { color: '#ff5f56', bg: 'rgba(255,95,86,0.1)' },
-  Frontend: { color: '#00f5a0', bg: 'rgba(0,245,160,0.1)' },
-  Backend: { color: '#7c3aed', bg: 'rgba(124,58,237,0.1)' },
-  Database: { color: '#f59e0b', bg: 'rgba(245,158,11,0.1)' },
-  Tools: { color: '#00c8ff', bg: 'rgba(0,200,255,0.1)' },
-  "Soft Skills": { color: '#ec4899', bg: 'rgba(236,72,153,0.1)' },
+const iconMap = {
+  "JavaScript": <SiJavascript color="#f7df1e" />,
+  "Python": <FaPython color="#3776AB" />,
+  "Java": <FaJava color="#007396" />,
+  "React": <FaReact color="#61DAFB" />,
+  "HTML & CSS": <FaHtml5 color="#E34F26" />,
+  "Bootstrap": <FaBootstrap color="#7952B3" />,
+  "Node.js": <FaNodeJs color="#339933" />,
+  "Express.js": <SiExpress color="#000000" />,
+  "REST APIs": <TbApi color="#00a870" />,
+  "FastAPI": <SiFastapi color="#009688" />,
+  "MongoDB": <SiMongodb color="#47A248" />,
+  "SQL": <FaDatabase color="#336791" />,
+  "Firebase": <SiFirebase color="#FFCA28" />,
+  "Vector Databases": <FaDatabase color="#00a870" />,
+  "Generative AI": <TbBrain color="#7c3aed" />,
+  "Agentic AI": <BsRobot color="#ec4899" />,
+  "LangChain & LangGraph": <TbBrain color="#0ea5e9" />,
+  "RAG": <FaDatabase color="#f59e0b" />,
+  "Git & GitHub": <FaGithub color="#181717" />,
+  "VS Code": <FaLaptopCode color="#007ACC" />
 };
 
 
@@ -39,7 +62,6 @@ export default function Skills() {
         {/* Skill bars by category */}
         <div className="skills-grid">
           {Object.entries(skills).map(([category, items], ci) => {
-            const { color, bg } = categoryColors[category] || categoryColors.Frontend;
             return (
               <motion.div
                 key={category}
@@ -49,20 +71,28 @@ export default function Skills() {
                 transition={{ duration: 0.6, delay: 0.2 + ci * 0.1 }}
               >
                 <div className="skills-category-header">
-                  <div className="skills-cat-dot" style={{ background: color }} />
-                  <span className="skills-cat-name" style={{ color }}>{category}</span>
+                  <div className="skills-cat-dot" style={{ background: 'var(--accent)' }} />
+                  <span className="skills-cat-name" style={{ color: 'var(--text-primary)', fontWeight: '600' }}>{category}</span>
                 </div>
                 <div className="skills-category-tags">
                   {items.map((skill, i) => (
                     <motion.span
                       key={skill.name}
                       className="skill-category-badge"
-                      style={{ border: `1px solid ${color}40`, color: color, background: `${color}10` }}
+                      style={{ 
+                        border: `1px solid rgba(187, 213, 218, 0.4)`, 
+                        color: 'var(--text-primary)', 
+                        background: 'rgba(255, 255, 255, 0.4)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                      }}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ delay: 0.3 + (ci * 0.1) + (i * 0.05), duration: 0.3 }}
-                      whileHover={{ scale: 1.05, background: `${color}20`, borderColor: color }}
+                      whileHover={{ scale: 1.05, background: 'rgba(255, 255, 255, 0.8)', borderColor: 'var(--accent)' }}
                     >
+                      {iconMap[skill.name] && <span style={{ display: 'flex', alignItems: 'center', fontSize: '14px' }}>{iconMap[skill.name]}</span>}
                       {skill.name}
                     </motion.span>
                   ))}

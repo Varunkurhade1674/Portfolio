@@ -57,7 +57,7 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen w-full flex items-center justify-center bg-[#050508] overflow-hidden px-4 md:px-8 lg:px-12 py-24"
+      className="relative min-h-screen w-full flex items-center justify-center bg-white overflow-hidden px-4 md:px-8 lg:px-12 py-24"
     >
       {/* Background Decorators */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -85,13 +85,13 @@ export default function Hero() {
             {/* Title Section */}
             <div className="space-y-2">
               <h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]" 
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.1]" 
                 style={{ fontFamily: 'var(--font-display)' }}
               >
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f5a0] to-[#00d2ff]">Varun</span>
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c880] to-[#00d2ff]">Varun</span>
               </h1>
               <div 
-                className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-300 leading-tight h-10 md:h-12 flex items-center" 
+                className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-600 leading-tight h-10 md:h-12 flex items-center" 
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 <RoleWriter />
@@ -102,7 +102,7 @@ export default function Hero() {
           {/* Description */}
           <motion.p 
             variants={itemVariants} 
-            className="text-slate-400 text-lg md:text-[20px] leading-relaxed max-w-lg" 
+            className="text-slate-600 text-lg md:text-[20px] leading-relaxed max-w-lg" 
             style={{ fontFamily: 'var(--font-body)' }}
           >
             I build intelligent, scalable AI systems. Passionate about multi-agent workflows, RAG architectures, and crafting AI-driven experiences that solve complex real-world problems.
@@ -133,7 +133,7 @@ export default function Hero() {
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] rounded-full p-1.5 bg-gradient-to-tr from-emerald-500/40 via-blue-500/40 to-purple-500/40 shadow-[0_0_60px_rgba(16,185,129,0.15)] group">
             
             {/* Inner Ring */}
-            <div className="w-full h-full rounded-full bg-[#050508] p-2">
+            <div className="w-full h-full rounded-full bg-white p-2">
                <img 
                  src="/profile.jpeg" 
                  alt="Varun Kurhade" 

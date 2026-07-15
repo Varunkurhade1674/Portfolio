@@ -194,7 +194,7 @@
   font-family: var(--font-display);
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .id-status {
@@ -221,13 +221,13 @@
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 900;
   line-height: 1.1;
-  color: #fff;
+  color: var(--text-primary);
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .cyber-glint {
-  background: linear-gradient(135deg, #ffffff 0%, #00f5a0 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

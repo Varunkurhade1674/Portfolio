@@ -24,7 +24,7 @@ export default function Achievements() {
         >
           <div className="section-label">Achievements</div>
           <h2 className="section-title">
-            Wins &amp; <span style={{ color: 'var(--amber)' }}>Recognition</span>
+            <span style={{ color: 'var(--amber)' }}>Achievements</span>
           </h2>
           <p className="section-subtitle" style={{ marginBottom: 60 }}>
             Competing and winning at the national and state level.
