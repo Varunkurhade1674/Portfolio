@@ -5,7 +5,7 @@ import { useInView } from '../hooks/useInView';
 import { projects } from '../data';
 import './Projects.css';
 
-const allFilters = ['All', 'React', 'Node.js', 'MongoDB', 'JavaScript'];
+const allFilters = ['All', 'React', 'Node.js', 'Python', 'AI'];
 
 function ProjectCard({ project, onClick, index, inView, isCarousel }) {
   const x = useMotionValue(0);
@@ -265,8 +265,8 @@ function ProjectCarousel({ items, onSelect }) {
   const baseCardWidth = 280; 
   let radius = 200;
   if(items.length > 1) {
-    radius = (baseCardWidth / 2) / Math.tan(Math.PI / items.length) + 40;
-    radius = Math.max(220, Math.min(radius, 400));
+    radius = (baseCardWidth / 2) / Math.tan(Math.PI / items.length) + 50;
+    radius = Math.max(220, radius);
   }
 
   // Auto-rotate every 5 seconds
@@ -312,7 +312,7 @@ function ProjectCarousel({ items, onSelect }) {
 
       <motion.div
         className="carousel-rotator"
-        style={{ rotateY: smoothRotation }}
+        style={{ rotateY: smoothRotation, z: -radius + 250 }}
         onPan={(e, info) => {
           rotation.set(rotation.get() + info.delta.x * 0.4);
         }}

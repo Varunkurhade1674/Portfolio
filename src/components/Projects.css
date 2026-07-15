@@ -420,6 +420,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .left-nav {
     left: 2%;
@@ -436,5 +442,11 @@
   .projects-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
