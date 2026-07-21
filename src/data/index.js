@@ -469,6 +469,23 @@ export const education = [
 
 export const achievements = [
   {
+    title: "Apna College Full Stack Web Development",
+    description:
+      "Successfully completed the Delta course in Full Stack Web Development by Apna College.",
+    icon: "🎓",
+    type: "Certification",
+    color: "#8b5cf6",
+  },
+  {
+    title: "AI Internship Completion",
+    description:
+      "Successfully completed a 3-month AI Internship at Madhwa Infotech (Sep 2025 - Dec 2025), working on various AI tasks and projects.",
+    icon: "📜",
+    type: "Certification",
+    color: "#8b5cf6",
+    venue: "Madhwa Infotech",
+  },
+  {
     title: "CODEFIESTA National Hackathon",
     description:
       "Competed in a national-level hackathon challenging developers across India to build innovative solutions under time pressure.",
