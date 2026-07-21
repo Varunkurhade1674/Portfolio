@@ -300,25 +300,7 @@ export const projects = [
     live: "#",
     icon: "📑",
   },
-  {
-    id: 12,
-    title: "SupplyChain AI",
-    subtitle: "Multi-Agent Crisis Resolution Platform",
-    description: "Built a Multi-Agent AI platform that automates disruption analysis, document retrieval, decision-making, and executive report generation.",
-    tech: ["Python", "LangGraph", "LangChain", "FastAPI", "FAISS", "RAG"],
-    features: [
-      "Automated disruption analysis",
-      "Executive report generation",
-      "Decision-making automation",
-    ],
-    category: ["Python", "AI", "Agentic AI"],
-    featured: false,
-    badge: "ENTERPRISE",
-    color: "#8b5cf6",
-    github: "Repository Link",
-    live: "#",
-    icon: "⛓️",
-  },
+
   {
     id: 1,
     title: "Cryptalk",
