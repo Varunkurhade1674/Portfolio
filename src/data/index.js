@@ -313,10 +313,10 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "AI Intern",
+    role: "AI Internship",
     company: "Spherenex",
-    duration: "Jan 2026 – Present",
-    type: "current",
+    duration: "Jan 2026 - June 2026",
+    type: "completed",
     description:
       "Working on production-grade AI applications and multi-agent systems in a professional environment.",
     highlights: [
