@@ -139,7 +139,7 @@ export const projects = [
     featured: true,
     badge: "HEALTH AI",
     color: "#8b5cf6",
-    github: "https://github.com/Varunkurhade1674/AI-Medical-Chatbot",
+    github: "https://github.com/Varunkurhade1674/AI-Medical-Chat",
     live: "#",
     icon: "⚕️",
   },

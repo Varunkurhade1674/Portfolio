@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiX, FiCheck, FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiX, FiCheck, FiStar, FiChevronLeft, FiChevronRight, FiPlay } from 'react-icons/fi';
 import { useInView } from '../hooks/useInView';
 import { projects } from '../data';
 import './Projects.css';
