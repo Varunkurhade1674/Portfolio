@@ -60,6 +60,27 @@ export const skills = {
 
 export const projects = [
   {
+    id: 17,
+    title: "AI-Recipe-Generator",
+    subtitle: "AI Recipe Generation Platform",
+    description: "Developed an AI recipe generation platform that creates personalized recipes based on ingredients, cuisine, dietary preferences, and cooking constraints. Implemented LangChain PromptTemplate, RunnableSequence (LCEL), and Output Parsers. Designed a modern dashboard with SQLite integration for storing and retrieving recipes.",
+    tech: ["Python", "FastAPI", "LangChain", "Groq Llama 3.3", "SQLite", "HTML", "CSS", "JavaScript"],
+    features: [
+      "Personalized recipe generation",
+      "LangChain LCEL & PromptTemplate integration",
+      "Structured generation & nutritional analysis",
+      "SQLite-based recipe storage",
+      "Modern recipe management dashboard"
+    ],
+    category: ["Python", "AI", "LangChain", "FastAPI"],
+    featured: true,
+    badge: "FOOD AI",
+    color: "#8b5cf6",
+    github: "https://github.com/Varunkurhade1674/AI-Recipe-Generator",
+    live: "#",
+    icon: "🍳",
+  },
+  {
     id: 16,
     title: "FinPilot AI",
     subtitle: "Multi-Agent Financial Advisor",
