@@ -60,6 +60,27 @@ export const skills = {
 
 export const projects = [
   {
+    id: 16,
+    title: "FinPilot AI",
+    subtitle: "Multi-Agent Financial Advisor",
+    description: "Developed a LangGraph-powered multi-agent financial advisory platform where specialized AI agents collaborate to generate personalized financial plans. Orchestrated Budget Planning, Investment Analysis, Risk Assessment, and Financial Summary agents using StateGraph and Supervisor patterns. Integrated Supabase for persistent report storage with a modern SaaS-style dashboard.",
+    tech: ["Python", "FastAPI", "LangGraph", "LangChain", "Groq Llama 3.3", "Supabase", "HTML", "CSS", "JavaScript"],
+    features: [
+      "LangGraph multi-agent orchestration",
+      "Specialized AI agents collaboration",
+      "StateGraph and Supervisor patterns",
+      "Supabase persistent storage",
+      "Modern SaaS-style dashboard"
+    ],
+    category: ["Python", "AI", "LangGraph", "Agentic AI"],
+    featured: true,
+    badge: "FINANCE AI",
+    color: "#8b5cf6",
+    github: "https://github.com/Varunkurhade1674/FinPilot-AI",
+    live: "#",
+    icon: "💰",
+  },
+  {
     id: 15,
     title: "AI-Resume-Optimizer",
     subtitle: "AI Resume Optimization Platform",
