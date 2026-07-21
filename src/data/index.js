@@ -60,6 +60,27 @@ export const skills = {
 
 export const projects = [
   {
+    id: 15,
+    title: "AI-Resume-Optimizer",
+    subtitle: "AI Resume Optimization Platform",
+    description: "Built an AI-powered resume optimization platform that analyzes resumes against job descriptions and generates ATS improvement recommendations. Automated ATS scoring, skill-gap analysis, resume summaries, cover letter generation, and interview question creation. Integrated SQLite for storing analysis reports with a clean dashboard.",
+    tech: ["Python", "FastAPI", "Groq Llama 3.3", "SQLite", "HTML", "CSS", "JavaScript"],
+    features: [
+      "ATS scoring & skill-gap analysis",
+      "Cover letter & interview question generation",
+      "Resume vs Job Description analysis",
+      "SQLite-based report storage",
+      "Dashboard for management and retrieval"
+    ],
+    category: ["Python", "AI", "FastAPI"],
+    featured: true,
+    badge: "CAREER AI",
+    color: "#8b5cf6",
+    github: "https://github.com/Varunkurhade1674/AI-Resume-Optimizer",
+    live: "#",
+    icon: "📄",
+  },
+  {
     id: 14,
     title: "AI-Medical-Chatbot",
     subtitle: "AI Healthcare Assistant",
