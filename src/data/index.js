@@ -469,6 +469,15 @@ export const education = [
 
 export const achievements = [
   {
+    title: "AI Internship Completion",
+    description:
+      "Successfully completed a 3-month AI Internship at Madhwa Infotech (Sep 2025 - Dec 2025), working on various AI tasks and projects.",
+    icon: "📜",
+    type: "Certification",
+    color: "#8b5cf6",
+    venue: "Madhwa Infotech",
+  },
+  {
     title: "Fullstack Development Internship",
     description:
       "Successfully completed a 15-week Fullstack Development internship at Spherenex, demonstrating diligence and commitment.",
@@ -484,15 +493,6 @@ export const achievements = [
     icon: "🎓",
     type: "Certification",
     color: "#8b5cf6",
-  },
-  {
-    title: "AI Internship Completion",
-    description:
-      "Successfully completed a 3-month AI Internship at Madhwa Infotech (Sep 2025 - Dec 2025), working on various AI tasks and projects.",
-    icon: "📜",
-    type: "Certification",
-    color: "#8b5cf6",
-    venue: "Madhwa Infotech",
   },
   {
     title: "CODEFIESTA National Hackathon",
