@@ -469,6 +469,15 @@ export const education = [
 
 export const achievements = [
   {
+    title: "Fullstack Development Internship",
+    description:
+      "Successfully completed a 15-week Fullstack Development internship at Spherenex, demonstrating diligence and commitment.",
+    icon: "💼",
+    type: "Certification",
+    color: "#8b5cf6",
+    venue: "Spherenex",
+  },
+  {
     title: "Apna College Full Stack Web Development",
     description:
       "Successfully completed the Delta course in Full Stack Web Development by Apna College.",
