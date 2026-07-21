@@ -344,7 +344,7 @@ export const projects = [
     featured: false,
     badge: "LIVE",
     color: "#8b5cf6",
-    github: "#",
+    github: "https://github.com/Varunkurhade1674/Wanderlust",
     live: "#",
     icon: "🏡",
   },
