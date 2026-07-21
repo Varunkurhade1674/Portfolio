@@ -60,6 +60,27 @@ export const skills = {
 
 export const projects = [
   {
+    id: 13,
+    title: "AI-Content-Studio",
+    subtitle: "AI Blog & Article Generator",
+    description: "Developed an AI-powered content generation platform that creates SEO-friendly blogs and articles from user prompts using Groq Llama 3.3. Implemented prompt engineering, content customization, and SQLite-based storage. Built a modular FastAPI backend with clean architecture.",
+    tech: ["Python", "FastAPI", "Groq Llama 3.3", "HTML", "CSS", "JavaScript", "SQLite"],
+    features: [
+      "SEO-friendly blog and article generation",
+      "Prompt engineering & content customization",
+      "SQLite-based storage and history management",
+      "Markdown export functionality",
+      "Modular FastAPI backend"
+    ],
+    category: ["Python", "AI", "FastAPI"],
+    featured: true,
+    badge: "AI CONTENT",
+    color: "#8b5cf6",
+    github: "https://github.com/Varunkurhade1674/AI-Content-Studio",
+    live: "#",
+    icon: "✍️",
+  },
+  {
     id: 5,
     title: "AuditFlow",
     subtitle: "AI-Powered Multi-Agent Document Auditing System",
