@@ -390,7 +390,7 @@ export const projects = [
     featured: false,
     badge: "FINTECH",
     color: "#8b5cf6",
-    github: "#",
+    github: "https://github.com/Varunkurhade1674/ZERODHA_CLONE",
     live: "#",
     demoVideo: "/Zerodhaclone.mp4",
     icon: "📈",
