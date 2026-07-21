@@ -60,6 +60,27 @@ export const skills = {
 
 export const projects = [
   {
+    id: 14,
+    title: "AI-Medical-Chatbot",
+    subtitle: "AI Healthcare Assistant",
+    description: "Built a LangChain-powered medical chatbot with conversational memory to answer general healthcare queries using Groq Llama 3.3. Utilized PromptTemplate, Conversation Memory, RunnableSequence (LCEL), and StrOutputParser. Integrated SQLite for chat history and designed a responsive dashboard with secure API authentication.",
+    tech: ["Python", "FastAPI", "LangChain", "Groq Llama 3.3", "SQLite", "HTML", "CSS", "JavaScript"],
+    features: [
+      "Conversational memory & contextual responses",
+      "LangChain LCEL & PromptTemplate integration",
+      "SQLite-based chat history management",
+      "Responsive healthcare dashboard",
+      "Secure API key authentication"
+    ],
+    category: ["Python", "AI", "LangChain", "FastAPI"],
+    featured: true,
+    badge: "HEALTH AI",
+    color: "#8b5cf6",
+    github: "https://github.com/Varunkurhade1674/AI-Medical-Chatbot",
+    live: "#",
+    icon: "⚕️",
+  },
+  {
     id: 13,
     title: "AI-Content-Studio",
     subtitle: "AI Blog & Article Generator",
